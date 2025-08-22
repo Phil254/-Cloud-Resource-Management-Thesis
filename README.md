@@ -1,9 +1,3 @@
-Here is a professional `README.md` file that you can copy and paste directly into your GitHub repository. It is formatted to provide a clear and concise overview of your research, tailored for an academic audience.
-
------
-
-### `README.md`
-
 # Cloud Computing: Design and Evaluation of a Quality-of-Service Aware Virtual Machine Allocation Algorithm
 
 This repository contains the code and data for a Master of Science research project focusing on developing an intelligent virtual machine (VM) allocation algorithm for cloud computing environments. The research addresses the challenge of balancing multiple, competing performance objectives to ensure high-quality service delivery.
@@ -49,32 +43,69 @@ The empirical results demonstrate that the SLA-PSO algorithm consistently and si
 
 -----
 
-### 5\. How to Run the Simulation
+### 5\. Getting Started: Setting Up and Running the Code
 
-To replicate the results of this research, follow these steps:
+This project includes both the core Java simulation code and a Python script for data analysis and plotting.
+
+#### **5.1 Running the Simulation in Eclipse (Java)**
+
+This section provides instructions for setting up the SLA-PSO project in the Eclipse IDE and executing the simulation.
+
+**Prerequisites:**
+
+1.  **Java Development Kit (JDK):** A recent version (JDK 8 or newer) is recommended.
+2.  **Eclipse IDE for Java Developers:** Download and install the latest version from the official Eclipse website.
+3.  **CloudSim Library:** The project requires the CloudSim library files, typically a `.jar` file.
+
+**Setup Instructions:**
 
 1.  **Clone the Repository**:
-
     ```bash
     git clone https://github.com/Phil254/-Cloud-Resource-Management-Thesis.git
     cd Cloud-Resource-Management-Thesis
     ```
+2.  **Launch Eclipse** and select your workspace.
+3.  Go to **File \> New \> Java Project**.
+4.  Give your project a name (e.g., `SLA-PSO-Simulation`) and click **Finish**.
+5.  Copy your `.java` files from your local repository folder and paste them into the **src** folder of your new Eclipse project.
+6.  **Configure the Build Path:**
+      * Right-click on your project folder in the Package Explorer and select **Properties**.
+      * Go to **Java Build Path** \> **Libraries**.
+      * Click **Add External JARs...** and navigate to where you have saved the CloudSim `.jar` file. Select it and click **Open**.
+      * Click **Apply and Close**.
 
-2.  **Install Dependencies**: The analysis requires Python and several data science libraries. You can install them using `pip`:
+**Running the Code:**
 
+1.  Right-click on your main class file in the `src` folder (e.g., `SlaPSOExample.java`).
+2.  Select **Run As \> Java Application**.
+3.  The simulation output will be displayed in the **Console** window.
+
+#### **5.2 Analyzing the Results (Python)**
+
+This section provides instructions for running the Python analysis script to generate plots from the simulation results.
+
+**Prerequisites:**
+
+1.  **Python:** A Python installation (version 3.6 or newer).
+2.  **Python Libraries:** You will need `pandas`, `matplotlib`, and `seaborn`.
+
+**Setup Instructions:**
+
+1.  **Clone the Repository** (if you haven't already).
+2.  **Install Dependencies**:
     ```bash
     pip install pandas matplotlib seaborn
     ```
+3.  **Place the Data File**: Ensure the `compare_sla_results.csv` file is accessible to the script as specified in the code.
 
-3.  **Run the Analysis Script**:
-    Place the `compare_sla_results.csv` file in the correct directory as per the script.
-    The main analysis script, `plot_results.py`, can be executed from your terminal:
+**Running the Analysis:**
 
+1.  Execute the main analysis script, `plot_results.py`, from your terminal:
     ```bash
     python plot_results.py
     ```
 
-The script will generate various plots and save them in a new `comparison_plots` directory, visualizing the performance of each algorithm.
+The script will generate various plots (line plots, bar charts, and box plots) and save them in a new `comparison_plots` directory, visualizing the performance of each algorithm.
 
 -----
 
